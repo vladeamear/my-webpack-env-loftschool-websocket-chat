@@ -1,0 +1,40 @@
+@import "helpers";
+
+.button {
+  border: none;
+  background: none;
+  border-radius: 2px;
+  padding: 10px 10px 9px 10px;
+  color: $text-accent-100;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 17px;
+  cursor: pointer;
+
+  &__save {
+    background-color: $blue-700;
+  }
+  
+  &__primary, &__send {
+    border-radius: 5px;
+    background-color: $blue-300;
+    color: $text-primary-100;
+    transition: background-color .1s ease-in-out;
+    &:hover {
+      border-radius: 5px;
+      background-color: $blue-500;
+      color: $text-primary-100;
+    }
+  }
+
+  &__primary {
+    padding: 13px 40px;
+  }
+
+  &__send {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 6px 20px;
+    text-transform: none;
+  }
+}

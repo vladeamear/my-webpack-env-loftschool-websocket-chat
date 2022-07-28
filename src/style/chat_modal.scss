@@ -1,0 +1,68 @@
+@import "helpers";
+
+.chat_modal {
+  &__wrapper {
+    background-color: $blue-800;
+    padding: 32px 35px 42px 35px;
+    width: 364px;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  &__bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: $text-primary-100;
+    margin: 0;
+  }
+
+  &__upload {
+    margin: 39px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    &_btn {
+      display: block;
+      width: 86px;
+      height: 86px;
+      background-color: $blue-600;
+      background-image: url('../static/camera.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color .2s ease-in-out;
+      &:hover {
+        background-color: $blue-700;
+      }
+    }
+  }
+
+  &__close {
+    background-color: transparent;
+    border: none;
+    background-image: url('../static/close.svg');
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+}

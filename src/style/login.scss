@@ -1,0 +1,66 @@
+@import "helpers";
+
+.login {
+  &__wrapper {
+    padding: 39px 77px 50px 77px;
+    background-color: $blue-800;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__img {
+    width: 139px;
+    height: 139px;
+    background-color: $blue-600;
+    background-image: url('../static/chat.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin-bottom: 29px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: $text-primary-100;
+    margin-top: 0;
+    margin-bottom: 13px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    color: $text-primary-600;
+    margin-top: 0;
+    margin-bottom: 27px;
+  }
+  &__input {
+    &, &::placeholder {
+      box-sizing: border-box;
+      width: 300px;
+      border: none;
+      border-bottom: 1px solid $blue-500;
+      background: none;
+      padding: 13px 8px;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    color: $text-primary-100;
+    margin-bottom: 42px;
+
+    &::placeholder {
+      color: $text-primary-700;
+      padding-left: 0;
+    }
+    &:focus {
+      outline: none;
+      border-color: $blue-300;
+      &::placeholder {
+        color: $text-primary-100;
+      }
+    }
+  }
+}

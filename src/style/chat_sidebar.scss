@@ -1,0 +1,56 @@
+@import "helpers";
+
+.chat__sidebar {
+  min-width: 263px;
+  width: 30%;
+  background-color: $blue-800;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  border-right: 1px solid $blue-900;
+  &_menu {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    background-image: url('../static/menu.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-bottom: 13px;
+  }
+  &_userlist {
+    max-height: calc(100% - 36px);
+    box-sizing: border-box;
+    padding-top: 4px;
+    overflow: auto;
+  }
+}
+
+.sidebar__user {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 12px;
+  &_avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+  }
+  &_info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    &_name {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: $text-accent-200;
+    }
+    &_lastmassage {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 16px;
+      color: $text-primary-600;
+    }
+  }
+}

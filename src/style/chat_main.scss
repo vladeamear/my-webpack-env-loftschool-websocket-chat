@@ -1,0 +1,140 @@
+@import "helpers";
+
+.chat__main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &_top,
+  &_bottom {
+    background-color: $blue-800;
+    height: 56px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &_top {
+    padding: 13px 16px 9px;
+  }
+
+  &_middle {
+    height: calc(100% - 56px * 2);
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 10px;
+    overflow: auto;
+  }
+
+  &_bottom {
+    padding-inline: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .chat__input {
+      border: none;
+      background: none;
+      color: $text-primary-100;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      width: 100%;
+
+      &, &::placeholder {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      &::placeholder {
+        color: $text-primary-700;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &_text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: $text-primary-100;
+    margin: 0;
+
+    &_users_number {
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 14px;
+      color: $text-primary-600;
+      margin-bottom: 0;
+      margin-top: 4px;
+    }
+
+  }
+}
+
+
+.user_messages {
+  &-self {
+    flex-direction: row-reverse;
+    
+    .user_messages {
+      &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      &__message {
+        background-color: $blue-350;
+      }
+    } 
+
+  }
+  &__wrapper {
+    margin-top: 17px;
+    display: flex;
+    gap: 10px;
+  }
+  &__avatar {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    margin-top: 22px;
+  }
+  &__nickname {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: $text-accent-200;
+    margin-top: 0;
+    margin-bottom: 8px;
+    margin-left: 5px;
+  }
+  &__message {
+    padding: 8px 55px 10px 16px;
+    background-color: $blue-400;
+    border-radius: 5px;
+    position: relative;
+    width: fit-content;
+    max-width: 70%;
+    
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+    
+    &_time {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 16px;
+      color: $text-primary-600;
+      position: absolute;
+      margin: 0;
+      bottom: 4px;
+      right: 7px;
+    }
+  }
+}
+
+
+/* chat__main_bottom */

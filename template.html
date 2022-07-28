@@ -1,10 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
 
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+  <div id="app">
+    <div id="login" class="login__wrapper">
+      <div class="login__img"></div>
+      <h2 class="login__title">Авторизация</h2>
+      <p class="login__text">Введите пожалуйста свой ник для<br />дальнейшей авторизации</p>
+      <input type="text" name="nickname" id="nickname" placeholder="Введите свой ник" class="login__input">
+      <input type="button" value="Войти" id="login_submit" class="button button__primary">
+    </div>
+
+    <div id="chat" class="chat__wrapper hidden">
+      <div class="chat__sidebar">
+
+        <input type="button" class="chat__sidebar_menu">
+
+        <div class="chat__sidebar_userlist">
+
+          <div class="sidebar__user">
+            <img src="./src/static/blank-user.png" alt="Boroda23" class="sidebar__user_avatar">
+            <div class="sidebar__user_info">
+              <span class="sidebar__user_info_name">Boroda23</span>
+              <span class="sidebar__user_info_lastmassage">Рад был пообщаться</span>
+            </div>
+          </div>
+
+          <div class="sidebar__user">
+            <img src="./src/static/blank-user.png" alt="Boroda23" class="sidebar__user_avatar">
+            <div class="sidebar__user_info">
+              <span class="sidebar__user_info_name">Boroda23</span>
+              <span class="sidebar__user_info_lastmassage">Рад был пообщаться</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="chat__main">
+
+        <div class="chat__main_top">
+          <p class="chat__main_text">Чат</p>
+          <p class="chat__main_text_users_number">2 участника</p>
+        </div>
+
+        <div class="chat__main_middle">
+
+          <div class="user_messages__wrapper">
+            <img src="./src/static/blank-user.png" alt="user_nick" class="user_messages__avatar">
+            <div class="user_messages__right">
+
+              <p class="user_messages__nickname">Boroda23</p>
+
+              <div class="user_messages__message">
+                <p class="chat__main_text">Привет?</p>
+                <p class="user_messages__message_time">17:55</p>
+              </div>
+
+              <div class="user_messages__message">
+                <p class="chat__main_text">Как дела?</p>
+                <p class="user_messages__message_time">17:55</p>
+              </div>
+
+              <div class="user_messages__message">
+                <p class="chat__main_text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, sint. Quae laudantium nulla nam
+                  blanditiis fugiat aperiam quis aut illo eaque, veritatis suscipit perspiciatis, nisi temporibus
+                  provident dolor! Ducimus, facere?
+                </p>
+                <p class="user_messages__message_time">17:55</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="user_messages__wrapper user_messages-self">
+            <img src="./src/static/blank-user.png" alt="user_nick" class="user_messages__avatar">
+            <div class="user_messages__right">
+
+              <p class="user_messages__nickname">Boroda23</p>
+
+              <div class="user_messages__message">
+                <p class="chat__main_text">Привет?</p>
+                <p class="user_messages__message_time">17:55</p>
+              </div>
+
+              <div class="user_messages__message">
+                <p class="chat__main_text">Как дела?</p>
+                <p class="user_messages__message_time">17:55</p>
+              </div>
+
+              <div class="user_messages__message">
+                <p class="chat__main_text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, sint. Quae laudantium nulla nam
+                  blanditiis fugiat aperiam quis aut illo eaque, veritatis suscipit perspiciatis, nisi temporibus
+                  provident dolor! Ducimus, facere?
+                </p>
+                <p class="user_messages__message_time">17:55</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="chat__main_bottom">
+          <input type="text" name="" id="" placeholder="Введите сообщение..." class="chat__input">
+          <input type="button" value="Отправить" class="button button__send">
+        </div>
+
+      </div>
+    </div>
+
+    <div id="chat_modal" class="chat_modal__bg hidden">
+      <div class="chat_modal__wrapper">
+
+        <input type="button" id="close_modal" class="chat_modal__close">
+
+        <p class="chat_modal__text">Загрузка фото</p>
+        <div class="chat_modal__upload">
+          <input type="file" name="new_avatar" id="new_avatar" accept="image/png, image/jpg, image/gif, image/jpeg"
+            class="hidden">
+          <label for="new_avatar" class="chat_modal__upload_btn"></label>
+          <p class="chat_modal__text">Nik</p>
+        </div>
+
+        <input type="button" value="Выйти" class="button button__save">
+
+      </div>
+    </div>
+
+  </div>
+</body>
+
 </html>

@@ -1,6 +1,8 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const {
+  CleanWebpackPlugin
+} = require('clean-webpack-plugin')
 
 
 module.exports = {
@@ -18,7 +20,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'webpack Boilerplate',
+      title: 'Чат',
       template: path.resolve(__dirname, './template.html'), // шаблон
       filename: 'index.html', // название выходного файла
     }),
