@@ -9,7 +9,9 @@
     "watch": "webpack --watch --mode=development",
     "build": "webpack --mode=production",
     "build-dev": "webpack --mode=development",
-    "http-server": "http-server -o ./dist"
+    "http-server": "http-server -o ./dist",
+    "server": "node server",
+    "client-n-server": "concurrently \"yarn start\" \"yarn server\""
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",
@@ -28,6 +30,8 @@
     "webpack-dev-server": "^4.9.3"
   },
   "dependencies": {
-    "clean-webpack-plugin": "^4.0.0"
+    "clean-webpack-plugin": "^4.0.0",
+    "concurrently": "^7.3.0",
+    "ws": "^8.8.1"
   }
 }

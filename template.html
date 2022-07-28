@@ -11,14 +11,14 @@
       <div class="login__img"></div>
       <h2 class="login__title">Авторизация</h2>
       <p class="login__text">Введите пожалуйста свой ник для<br />дальнейшей авторизации</p>
-      <input type="text" name="nickname" id="nickname" placeholder="Введите свой ник" class="login__input">
+      <input type="text" name="nickname" id="login_nickname" placeholder="Введите свой ник" class="login__input">
       <input type="button" value="Войти" id="login_submit" class="button button__primary">
     </div>
 
-    <div id="chat" class="chat__wrapper">
+    <div id="chat" class="chat__wrapper hidden">
       <div class="chat__sidebar">
 
-        <input type="button" class="chat__sidebar_menu">
+        <input type="button" class="chat__sidebar_menu" id="menu">
 
         <div class="chat__sidebar_userlist" id="users_list">
 <!--
@@ -51,6 +51,7 @@
 
         <div class="chat__main_middle" id="chat_window">
 <!-- 
+          <p class="chat__main_middle-action">Пользователь {...} присоединился к чату</p>
           <div class="user_messages__wrapper">
             <img alt="Boroda23" class="user_messages__avatar" data-nickname="Boroda23">
             <div class="user_messages__right" data-role="messages-from-user">
@@ -110,8 +111,8 @@
         </div>
 
         <div class="chat__main_bottom">
-          <input type="text" name="" id="" placeholder="Введите сообщение..." class="chat__input">
-          <input type="button" value="Отправить" class="button button__send">
+          <input type="text" id="message_input" placeholder="Введите сообщение..." class="chat__input">
+          <input type="button" value="Отправить" class="button button__send" id="send">
         </div>
 
       </div>
@@ -130,7 +131,7 @@
           <p class="chat_modal__text">Nik</p>
         </div>
 
-        <input type="button" value="Выйти" class="button button__save">
+        <input type="button" value="Выйти" class="button button__save" id="exit">
 
       </div>
     </div>

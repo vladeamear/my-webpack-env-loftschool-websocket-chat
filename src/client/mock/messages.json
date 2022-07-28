@@ -1,0 +1,38 @@
+[
+  {
+    "user": "boroda23",
+    "message": "Привет!",
+    "timestamp": "12:00",
+    "action": false
+  },
+  {
+    "user": "boroda23",
+    "message": "Как дела?",
+    "timestamp": "12:00",
+    "action": false
+  },
+  {
+    "user": "Nik",
+    "message": "Привет:)",
+    "timestamp": "12:00",
+    "action": false
+  },
+  {
+    "user": "Nik",
+    "message": "У меня хорошо, как у тебя",
+    "timestamp": "12:00",
+    "action": false
+  },
+  {
+    "user": "Nik",
+    "message": "",
+    "timestamp": "12:00",
+    "action": "left"
+  },
+  {
+    "user": "Nik",
+    "message": "",
+    "timestamp": "12:00",
+    "action": "joined"
+  }
+]

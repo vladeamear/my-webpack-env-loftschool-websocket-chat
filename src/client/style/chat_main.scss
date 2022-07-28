@@ -23,6 +23,17 @@
     box-sizing: border-box;
     padding-inline: 10px;
     overflow: auto;
+    &-action {
+      margin: 4px 0;
+      padding: 4px 20px;
+      font-size: 12px;
+      line-height: 14px;
+      color: $text-primary-100;
+      background-color: $blue-350;
+      width: max-content;
+      border-radius: 10px;
+      margin-inline: auto;
+    }
   }
 
   &_bottom {
