@@ -1,0 +1,12 @@
+[
+  {
+    "user": "Nik",
+    "avatar": "nik",
+    "self": true
+  },
+  {
+    "user": "boroda23",
+    "avatar": "boroda23",
+    "self": false
+  }
+]
